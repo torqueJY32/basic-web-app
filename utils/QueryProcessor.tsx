@@ -61,7 +61,15 @@ export default function QueryProcessor(query: string): string {
 
   }
 
+  if (query.toLowerCase().includes("power") && query.toLowerCase().includes("what is")) {
 
+
+    const a = query.split(" ");
+
+    return Math.pow(parseInt(a[2]), parseInt(a[7].substring(0, a[7].length - 1))) + "";
+
+
+  }
 
 
   if (query.toLowerCase().includes("hich of the following numbers is both a square and a cube")) {
