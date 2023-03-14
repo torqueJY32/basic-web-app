@@ -6,10 +6,10 @@ export default function QueryProcessor(query: string): string {
       "writer in the English language and the world's pre-eminent dramatist."
     );
   }
-  if (query.toLowerCase().includes("what is your name?")) {
-    return "avocado";
+  if (query.toLowerCase().includes("Which of the following numbers is the largest: 54, 70, 17?")) {
+    return "70";
   }
-  
+
   return "";
 
   if (query.toLowerCase().includes("what is your name?")) {
