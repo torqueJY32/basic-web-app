@@ -51,7 +51,7 @@ export default function QueryProcessor(query: string): string {
 
   }
 
-  if (query.toLowerCase().includes("multiplied") && query.toLowerCase().includes("what is")) {
+  if (query.toLowerCase().includes("minus") && query.toLowerCase().includes("what is")) {
 
 
     const a = query.split(" ");
