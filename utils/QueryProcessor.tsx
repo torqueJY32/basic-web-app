@@ -46,7 +46,7 @@ export default function QueryProcessor(query: string): string {
 
     const a = query.split(" ");
 
-    return parseInt(a[2]) * parseInt(a[5].substring(0, a[4].length - 1)) + "";
+    return parseInt(a[2]) * parseInt(a[5].substring(0, a[5].length - 1)) + "";
 
 
   }
