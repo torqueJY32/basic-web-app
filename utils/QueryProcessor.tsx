@@ -6,8 +6,29 @@ export default function QueryProcessor(query: string): string {
       "writer in the English language and the world's pre-eminent dramatist."
     );
   }
-  if (query.toLowerCase().includes("Which of the following numbers is the largest: 54, 70, 17?")) {
-    return "70";
+  if (query.toLowerCase().includes("which of the following numbers is the largest")) {
+
+
+    const a = query.split(":");
+    const c = a[1].substring(1, a[1].length - 1);
+    const b = c.split(", ");
+
+    const i = parseInt(b[0]);
+    const ii = parseInt(b[1]);
+    const iii = parseInt(b[2]);
+
+
+    if(i > ii && i > iii){
+      return i + "";
+    }
+    if(ii > i && ii > iii){
+      return ii + "";
+    }
+    if(iii > ii && iii > i){
+      return iii + "";
+    }
+
+
   }
 
   return "";
