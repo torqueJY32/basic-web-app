@@ -66,8 +66,9 @@ export default function QueryProcessor(query: string): string {
 
   if (query.toLowerCase().includes("hich of the following numbers is both a square and a cube")) {
 
+    var result = "";
 
-
+    var added = false;
     const a = query.split(":");
     const c = a[1].substring(1, a[1].length - 1);
     const b = c.split(", ");
@@ -81,54 +82,107 @@ export default function QueryProcessor(query: string): string {
     const i7 = parseInt(b[6]);
 
     if(Math.sqrt(i) * Math.sqrt(i) == i && Math.cbrt(i)*Math.cbrt(i)*Math.cbrt(i) == i){
-      return i + "";
+      if(!added){
+        result+=i;
+      added = true;
+    }
+      else{
+        result += ", " + i;
+      }
     }
     if(Math.sqrt(ii) * Math.sqrt(ii) == ii && Math.cbrt(ii)*Math.cbrt(ii)*Math.cbrt(ii) == ii){
-      return ii + "";
+      
+      if(!added){
+        result+=ii;
+      added = true;
+    }
+      else{
+        result += ", " + ii;
+      }
+
     }
     if(Math.sqrt(iii) * Math.sqrt(iii) == iii && Math.cbrt(iii)*Math.cbrt(iii)*Math.cbrt(iii) == iii){
-      return iii + "";
+      if(!added){
+        result+=iii;
+      added = true;
+    }
+      else{
+        result += ", " + iii;
+      }
+
     }
     if(Math.sqrt(i4) * Math.sqrt(i4) == i4 && Math.cbrt(i4)*Math.cbrt(i4)*Math.cbrt(i4) == i4){
-      return i4 + "";
+      if(!added){
+        result+=i4;
+      added = true;
+    }
+      else{
+        result += ", " + i4;
+      }
+
     }
     if(Math.sqrt(i5) * Math.sqrt(i5) == i5 && Math.cbrt(i5)*Math.cbrt(i5)*Math.cbrt(i5) == i5){
-      return i5 + "";
+      if(!added){
+        result+=i5;
+      added = true;
+    }
+      else{
+        result += ", " + i5;
+      }
+
     }
     if(Math.sqrt(i6) * Math.sqrt(i6) == i6 && Math.cbrt(i6)*Math.cbrt(i6)*Math.cbrt(i6) == i6){
-      return i6 + "";
+      if(!added){
+        result+=i6;
+      added = true;
+    }
+      else{
+        result += ", " + i6;
+      }
+
     }
     if(Math.sqrt(i7) * Math.sqrt(i7) == i7 && Math.cbrt(i7)*Math.cbrt(i7)*Math.cbrt(i7) == i7){
-      return i7 + "";
+      if(!added){
+        result+=i7;
+      added = true;
     }
+      else{
+        result += ", " + i7;
+      }
+
+    }
+    return result;
 
   }
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   return "";
 
-  if (query.toLowerCase().includes("what is your name?")) {
-    return "qu ni ma de";
-  }
-  return "";
 
-
-  if (query.toLowerCase().includes("what is your name?")) {
-    return "qu ni ma de";
-  }
-  return "";
-
-
-  if (query.toLowerCase().includes("what is your name?")) {
-    return "qu ni ma de";
-  }
-  return "";
-
-
-  if (query.toLowerCase().includes("what is your name?")) {
-    return "qu ni ma de";
-  }
-  return "";
 
 }
