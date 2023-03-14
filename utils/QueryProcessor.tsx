@@ -31,6 +31,16 @@ export default function QueryProcessor(query: string): string {
 
   }
 
+  if (query.toLowerCase().includes("plus") && query.toLowerCase().includes("what is")) {
+
+
+    const a = query.split(" ");
+
+    return parseInt(a[2]) + parseInt(a[4].substring(0, a[4].length - 1)) + "";
+
+
+  }
+
   return "";
 
   if (query.toLowerCase().includes("what is your name?")) {
