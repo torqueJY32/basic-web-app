@@ -41,7 +41,15 @@ export default function QueryProcessor(query: string): string {
 
   }
 
+  if (query.toLowerCase().includes("multiplied") && query.toLowerCase().includes("what is")) {
 
+
+    const a = query.split(" ");
+
+    return parseInt(a[2]) * parseInt(a[5].substring(0, a[4].length - 1)) + "";
+
+
+  }
 
   if (query.toLowerCase().includes("hich of the following numbers is both a square and a cube")) {
 
